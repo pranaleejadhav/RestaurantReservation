@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController {
         } else if (Int(cnt) == nil){
             showMsg(title: "", subTitle: "Please enter valid number of persons")
         } else if (Int(cnt)! <= 0){
-            showMsg(title: "", subTitle: "Please enter valid number of persons")
+            showMsg(title: "", subTitle: "Number of persons should be greater than 0")
         }
         else{
     
@@ -87,7 +87,7 @@ class RegisterViewController: UIViewController {
     
     func isValidPhone(phone: String) -> Bool {
         
-        let phoneRegex = "^((\\+)|(00))[0-9]{6,14}$";
+        let phoneRegex = "[789][0-9]{9}";
         let valid = NSPredicate(format: "SELF MATCHES %@", phoneRegex).evaluate(with: phone)
         return valid
     }
@@ -102,4 +102,20 @@ class RegisterViewController: UIViewController {
    
     
     
+}
+
+extension String {
+    var isPhoneNumber: Bool {
+        do {
+            let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
+            let matches = detector.matches(in: self, options: [], range: NSMakeRange(0, self.count))
+            if let res = matches.first {
+                return res.resultType == .phoneNumber && res.range.location == 0 && res.range.length == self.count
+            } else {
+                return false
+            }
+        } catch {
+            return false
+        }
+    }
 }

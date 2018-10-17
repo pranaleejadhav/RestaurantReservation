@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.3)
+  - IHKeyboardAvoiding (4.3)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - IHKeyboardAvoiding
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - IHKeyboardAvoiding
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  IHKeyboardAvoiding: e6a8f06434baf4c3b45825c3eedb35cea5d0d76b
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1f2e1b0fa6d46f5ea36d0bb9b0687a14c063b2b6
+PODFILE CHECKSUM: 9b0ead3682d16e005d06ad77a13ed110bbe10efb
 
 COCOAPODS: 1.5.0

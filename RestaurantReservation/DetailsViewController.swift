@@ -64,12 +64,13 @@ class DetailsViewController: UIViewController {
         }
         
         if statusLb.text == "Waiting for Checkin"{
-            
+            waitLb.text = dict["waitingtime"] as? String ?? "-"
             checkinLB.text = "-"
             checkinBtn.isEnabled = true
             checkoutBtn.isEnabled = false
             checkoutLb.text = "-"
         } else if statusLb.text == "Finished"{
+            waitLb.text = "-"
             var tempstr = getDateString(datestr: dict["checkintime"] as? String ?? "-")
             checkinLB.text = tempstr
             tempstr = getDateString(datestr: dict["checkouttime"] as? String ?? "-")
@@ -77,7 +78,8 @@ class DetailsViewController: UIViewController {
             checkinBtn.isEnabled = false
             checkoutBtn.isEnabled = false
         } else if statusLb.text == "Checked In" {
-            var tempstr = dict["checkintime"] as? String ?? "-"
+            waitLb.text = "-"
+            var tempstr = getDateString(datestr: dict["checkintime"] as? String ?? "-")
             checkinLB.text = tempstr
             checkinBtn.isEnabled = false
             checkoutBtn.isEnabled = true

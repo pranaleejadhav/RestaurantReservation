@@ -6,6 +6,7 @@ target 'RestaurantReservation' do
   use_frameworks!
   pod 'Alamofire', '~> 4.7'
   pod 'SVProgressHUD'
+  pod 'IHKeyboardAvoiding'
   
 # Pods for RestaurantReservation
 
