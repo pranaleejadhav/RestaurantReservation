@@ -87,7 +87,7 @@ class RegisterViewController: UIViewController {
     
     func isValidPhone(phone: String) -> Bool {
         
-        let phoneRegex = "[789][0-9]{9}";
+        let phoneRegex = "[123456789][0-9]{9}";
         let valid = NSPredicate(format: "SELF MATCHES %@", phoneRegex).evaluate(with: phone)
         return valid
     }

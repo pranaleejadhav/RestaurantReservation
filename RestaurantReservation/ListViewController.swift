@@ -51,6 +51,18 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Reservation List"
+        var backBtn: UIButton!
+        backBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 80, height: 25))
+        backBtn.setImage(UIImage(named: "Navigation Bar – Back Arrow"), for: UIControlState.normal)
+        backBtn.setTitle("Home", for: UIControlState.normal)
+        backBtn.addTarget(self, action: #selector(leftBtnPressed), for: .touchUpInside)
+        backBtn.contentHorizontalAlignment = .left
+        backBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+        backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        backBtn.tintColor = .white
+        backBtn.setTitleColor(.white, for: UIControlState.normal)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
+        
         tableView.separatorColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         tableView.dataSource = self
         tableView.delegate = self
@@ -60,7 +72,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
          searchController.searchBar.sizeToFit()
         searchController.dimsBackgroundDuringPresentation = false
         //searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search Customer"
         //self.navigationItem.searchController = searchController
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true // Setup the Scope Bar
@@ -75,6 +87,15 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         getList()
     }
+    
+    @IBAction func leftBtnPressed(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: false)
+    }
+    
+    /*override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(false)
+        navigationController?.popToRootViewController(animated: false)
+    }*/
     
     func getList(){
         let server_url = "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:4000/allreservations"

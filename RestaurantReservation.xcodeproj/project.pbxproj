@@ -12,6 +12,9 @@
 		9C29FAAD21755A78006A723D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C29FAAC21755A78006A723D /* ListViewController.swift */; };
 		9C29FAAF21755A93006A723D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C29FAAE21755A93006A723D /* DetailsViewController.swift */; };
 		9C29FAB121755F2C006A723D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C29FAB021755F2C006A723D /* RegisterViewController.swift */; };
+		9C3356DC2177F69A001A2C7D /* Navigation Bar – Back Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3356D92177F699001A2C7D /* Navigation Bar – Back Arrow.png */; };
+		9C3356DD2177F69A001A2C7D /* Navigation Bar – Back Arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3356DA2177F699001A2C7D /* Navigation Bar – Back Arrow@3x.png */; };
+		9C3356DE2177F69A001A2C7D /* Navigation Bar – Back Arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3356DB2177F699001A2C7D /* Navigation Bar – Back Arrow@2x.png */; };
 		9CB8D95F2173F34C00380AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D95E2173F34C00380AFD /* AppDelegate.swift */; };
 		9CB8D9642173F34C00380AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D9622173F34C00380AFD /* Main.storyboard */; };
 		9CB8D9662173F34D00380AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D9652173F34D00380AFD /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		9C29FAAC21755A78006A723D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		9C29FAAE21755A93006A723D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9C29FAB021755F2C006A723D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9C3356D92177F699001A2C7D /* Navigation Bar – Back Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation Bar – Back Arrow.png"; sourceTree = "<group>"; };
+		9C3356DA2177F699001A2C7D /* Navigation Bar – Back Arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation Bar – Back Arrow@3x.png"; sourceTree = "<group>"; };
+		9C3356DB2177F699001A2C7D /* Navigation Bar – Back Arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation Bar – Back Arrow@2x.png"; sourceTree = "<group>"; };
 		9CB8D95B2173F34C00380AFD /* RestaurantReservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantReservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB8D95E2173F34C00380AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB8D9632173F34C00380AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +116,9 @@
 		9CB8D95D2173F34C00380AFD /* RestaurantReservation */ = {
 			isa = PBXGroup;
 			children = (
+				9C3356D92177F699001A2C7D /* Navigation Bar – Back Arrow.png */,
+				9C3356DB2177F699001A2C7D /* Navigation Bar – Back Arrow@2x.png */,
+				9C3356DA2177F699001A2C7D /* Navigation Bar – Back Arrow@3x.png */,
 				9CB8D95E2173F34C00380AFD /* AppDelegate.swift */,
 				9CB8D9622173F34C00380AFD /* Main.storyboard */,
 				9CB8D9652173F34D00380AFD /* Assets.xcassets */,
@@ -265,7 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB8D9692173F34D00380AFD /* LaunchScreen.storyboard in Resources */,
+				9C3356DD2177F69A001A2C7D /* Navigation Bar – Back Arrow@3x.png in Resources */,
 				9CB8D9662173F34D00380AFD /* Assets.xcassets in Resources */,
+				9C3356DE2177F69A001A2C7D /* Navigation Bar – Back Arrow@2x.png in Resources */,
+				9C3356DC2177F69A001A2C7D /* Navigation Bar – Back Arrow.png in Resources */,
 				9CB8D9642173F34C00380AFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
