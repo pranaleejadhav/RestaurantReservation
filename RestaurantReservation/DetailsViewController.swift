@@ -120,7 +120,7 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func cust_checkin(_ sender: Any) {
-        let server_url = "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:4000/checkin"
+        let server_url = "http://ec2-18-216-57-132.us-east-2.compute.amazonaws.com:4000/checkin"
         SVProgressHUD.show()
         let params = ["mobilenumber":dict["mobilenumber"] as? Int,"table":dict["Table"] as? Int]
         Alamofire.request(server_url, method: .post, parameters: params,encoding:
@@ -165,7 +165,8 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func cust_checkout(_ sender: Any) {
-        let server_url = "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:4000/checkout"
+        
+        let server_url = "http://ec2-18-216-57-132.us-east-2.compute.amazonaws.com:4000/checkout"
         SVProgressHUD.show()
         let params = ["mobilenumber":dict["mobilenumber"] as? Int,"table":dict["Table"] as? Int]
         
@@ -220,6 +221,12 @@ class DetailsViewController: UIViewController {
                 subTitle, preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
         })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(false)
+        SVProgressHUD.dismiss()
+        //navigationController?.popToRootViewController(animated: false)
     }
     
 }

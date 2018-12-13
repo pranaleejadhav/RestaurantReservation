@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController {
         }
         else{
     
-        let server_url = "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:4000/reservation"
+        let server_url = "http://ec2-18-216-57-132.us-east-2.compute.amazonaws.com:4000/reservation"
         SVProgressHUD.show()
         var params = ["mobilenumber":moileField.text,"name":nameField.text,"count":cntField.text]
 

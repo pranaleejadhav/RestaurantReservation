@@ -29,7 +29,7 @@ extension ListViewController: UISearchResultsUpdating {
     }
 }
 
-extension ListViewController: UISearchBarDelegate {
+extension ListViewController: UISearchBarDelegate { // to use the scope
     // MARK: - UISearchBar Delegate
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
@@ -92,13 +92,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.popToRootViewController(animated: false)
     }
     
-    /*override func viewDidDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(false)
-        navigationController?.popToRootViewController(animated: false)
-    }*/
+        SVProgressHUD.dismiss()
+        //navigationController?.popToRootViewController(animated: false)
+    }
     
     func getList(){
-        let server_url = "http://ec2-18-221-45-243.us-east-2.compute.amazonaws.com:4000/allreservations"
+        let server_url = "http://ec2-18-216-57-132.us-east-2.compute.amazonaws.com:4000/allreservations"
         SVProgressHUD.show()
          Alamofire.request(server_url).responseJSON { (response:DataResponse<Any>) in
                 print(response)
